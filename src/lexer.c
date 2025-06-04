@@ -1,8 +1,8 @@
 #include "lexer.h"
 
-struct Token create_token(enum TokenType type, const char *start, size_t length)
+struct token create_token(enum token_type type, const char *start, size_t length)
 {
-  struct Token token;
+  struct token token;
   token.type = type;
   token.start = start;
   token.length = length;

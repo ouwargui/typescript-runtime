@@ -84,16 +84,16 @@ struct load_file_result load_file(const char *file_path)
   return result;
 }
 
-struct load_file_t create_file_struct(const char *file_path, char *file_content, size_t file_size)
+struct load_file create_file_struct(const char *file_path, char *file_content, size_t file_size)
 {
-  struct load_file_t file;
+  struct load_file file;
   file.file_path = file_path;
   file.file_content = file_content;
   file.file_size = file_size;
   return file;
 }
 
-void free_load_file_result(struct load_file_t *result)
+void free_load_file_result(struct load_file *result)
 {
   if (!result)
   {

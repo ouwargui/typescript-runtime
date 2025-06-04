@@ -2,7 +2,7 @@
 #define RESULT_H
 
 #define DECL_RESULT(name, OK, ERR) \
-  struct name##_result_t           \
+  struct name##_result             \
   {                                \
     enum                           \
     {                              \

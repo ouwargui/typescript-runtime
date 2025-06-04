@@ -14,8 +14,8 @@ int main(int argc, char **argv)
     return EX_USAGE;
   }
 
-  struct load_file_result_t file_result = load_file(argv[1]);
-  struct load_file_t file_data;
+  struct load_file_result file_result = load_file(argv[1]);
+  struct load_file file_data;
 
   if (file_result.type == load_file_ERR)
   {

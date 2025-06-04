@@ -3,7 +3,7 @@
 
 #include <stddef.h> /* For size_t */
 
-enum TokenType
+enum token_type
 {
   TOKEN_EOF,
   TOKEN_IDENTIFIER,
@@ -15,9 +15,9 @@ enum TokenType
   TOKEN_SEMICOLON,
 };
 
-struct Token
+struct token
 {
-  enum TokenType type;
+  enum token_type type;
   const char *start; // Pointer to the start of the token in the source code
   size_t length;     // Length of the token
 };

@@ -1,8 +1,8 @@
 #include "error.h"
 
-struct error_t create_error(const char *msg, int code)
+struct error create_error(const char *msg, int code)
 {
-  struct error_t err;
+  struct error err;
   err.msg = msg;
   err.code = code;
   return err;
