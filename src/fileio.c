@@ -3,6 +3,7 @@
 #include <sysexits.h>
 #include <string.h>
 
+#include "error.h"
 #include "fileio.h"
 
 load_file_result_t load_file(const char *file_path)
@@ -86,19 +87,10 @@ load_file_result_t load_file(const char *file_path)
 load_file_t create_file_struct(const char *file_path, char *file_content, size_t file_size)
 {
   load_file_t file;
-  /* Make a copy of the file path to ensure memory safety */
   file.file_path = file_path;
   file.file_content = file_content;
   file.file_size = file_size;
   return file;
-}
-
-error_t create_error(const char *msg, int code)
-{
-  error_t err;
-  err.msg = msg;
-  err.code = code;
-  return err;
 }
 
 void free_load_file_result(load_file_t *result)

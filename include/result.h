@@ -1,3 +1,6 @@
+#ifndef RESULT_H
+#define RESULT_H
+
 #define DECL_RESULT(name, OK, ERR) \
   typedef struct                   \
   {                                \
@@ -12,3 +15,5 @@
       ERR err;                     \
     };                             \
   } name##_result_t;
+
+#endif // RESULT_H
