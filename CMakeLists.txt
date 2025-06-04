@@ -10,7 +10,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
-file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/src/*.c)
+file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/src/*.c ${PROJECT_SOURCE_DIR}/src/lib/*.c)
 add_executable(typescript_runtime ${SOURCES})
 
 target_compile_options(typescript_runtime PRIVATE

@@ -3,7 +3,7 @@
 
 #include <stddef.h> /* For size_t */
 
-#include "error.h"
+#include "lib/error.h"
 #include "../include/result.h"
 
 /// @struct load_file_t

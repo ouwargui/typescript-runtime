@@ -3,7 +3,7 @@
 #include <sysexits.h>
 #include <string.h>
 
-#include "error.h"
+#include "lib/error.h"
 #include "fileio.h"
 
 struct load_file_result load_file(const char *file_path)
