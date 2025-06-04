@@ -6,9 +6,9 @@
 #include "error.h"
 #include "fileio.h"
 
-load_file_result_t load_file(const char *file_path)
+struct load_file_result load_file(const char *file_path)
 {
-  load_file_result_t result;
+  struct load_file_result result;
 
   if (!file_path)
   {
@@ -84,16 +84,16 @@ load_file_result_t load_file(const char *file_path)
   return result;
 }
 
-load_file_t create_file_struct(const char *file_path, char *file_content, size_t file_size)
+struct load_file_t create_file_struct(const char *file_path, char *file_content, size_t file_size)
 {
-  load_file_t file;
+  struct load_file_t file;
   file.file_path = file_path;
   file.file_content = file_content;
   file.file_size = file_size;
   return file;
 }
 
-void free_load_file_result(load_file_t *result)
+void free_load_file_result(struct load_file_t *result)
 {
   if (!result)
   {
